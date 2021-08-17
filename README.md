@@ -1,0 +1,3 @@
+# Second Bootstrap Project
+
+> :)
