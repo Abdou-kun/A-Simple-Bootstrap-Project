@@ -13,13 +13,20 @@
     "dart-sass": "^1.25.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-notify": "^4.0.0",
     "gulp-postcss": "^9.0.0",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.0.1",
+    "gulp-uglify": "^3.0.2",
     "postcss": "^8.3.6",
     "pug": "^3.0.2",
-    "sass": "^1.38.0"
+    "sass": "^1.38.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "devDependencies": {},
   "scripts": {
