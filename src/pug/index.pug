@@ -6,10 +6,120 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Bootstrap tuto
         link(rel="stylesheet", href="assets/css/bootstrap.min.css")
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
         link(rel="stylesheet", href="assets/css/style.css")
     body
+        //-  ========= header ==========
         header
-            nav.navbar.navbar-dark.bg-dark.navbar-expand.text-white
-                .container this is a navbar 
+            nav.navbar.navbar-dark.bg-dark.navbar-expand-md.text-white.fixed-top
+                .container
+                    a.navbar-brand Bootstrap Tutorial
+                    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#mainmenu")
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#mainmenu
+                        ul.navbar-nav.ms-auto
+                            li.nav-item
+                                a.nav-link(href="#hero") Get Started
+                            li.nav-item
+                                a.nav-link(href="#services") Features
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle(href="#", data-bs-toggle="dropdown") Learn
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(href="#basics") Learn Basics
+                                    li
+                                        a.dropdown-item(href="#more") Where To Go Next
+                            li.nav-item
+                                a.nav-link(href="#faq") FAQ 
+
+        //- =========  main content ============
+        main
+            //- ===== Hero =====
+            section#hero.bg-dark.text-light.text-center.py-5.text-sm-start
+                .container 
+                    div.d-sm-flex.align-items-center.justify-content-center
+                        div.py-3
+                            h1.display-5 Learn 
+                                span.text-info Bootstrap
+                            p.py-1.lead Lorem ipsum dolor sit. illo repudiandae maiores quidem quos veniam, hic sed consequatur possimus. Porro, accusantium cumque quae unde earum qui, quos sint adipisci necessitatibus, quisquam neque facilis ipsa!
+                            button.btn.btn-info Get Started
+                        img.img-fluid.w-50.d-none.d-sm-block(src= "./assets/img/hero.svg", alt="hero")
+
+            //- ==== services =====  
+            section#services.py-5
+                .container
+                    h2.text-center.mb-4 Features
+                    .row.text-center
+                        .col-md
+                            .card.bg-dark.text-light.mb-3 
+                                div.h1.mt-3
+                                    i.bi.bi-arrows-angle-contract
+                                .card-body.text-center
+                                    h4.card-title.text-info Responsive
+                                    p.card-text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur esse ut rem.
+                                    a(href="#").btn.btn-info Learn More
+                        .col-md
+                            .card.bg-dark.text-light.mb-3 
+                                div.h1.mt-3
+                                    i.bi.bi-pencil
+                                .card-body.text-center
+                                    h4.card-title.text-info Eeasy Styling
+                                    p.card-text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur esse ut rem.
+                                    a(href="#").btn.btn-info Learn More
+                        .col-md
+                            .card.bg-dark.text-light.mb-3 
+                                div.h1.mt-3
+                                    i.bi.bi-graph-up
+                                .card-body.text-center
+                                    h4.card-title.text-info Fast Working
+                                    p.card-text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur esse ut rem.
+                                    a(href="#").btn.btn-info Learn More
+            
+            //-  ===== what to learn =====
+            section#basics.py-5
+                .container
+                    .row.align-items-center.justify-content-center
+                        .col-md 
+                            img.img-fluid(src="assets/img/learn.svg", alt="learn")
+                        .col-md.py-4
+                            h2 Learn Basics
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorum ducimus enim! Voluptatum consequuntur soluta excepturi natus. Sunt repellat aliquam earum voluptates asperiores, doloremque, alias beatae aut quis consectetur obcaecati.
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus ut voluptatibus soluta, quos fuga?
+            
+            //-  ===== where to go next =====
+            section#more.py-5.bg-dark.text-light
+                .container
+                    .row.align-items-center.justify-content-center.flex-row-reverse
+                        .col-md 
+                            img.img-fluid(src="assets/img/next.svg", alt="next")
+                        .col-md.py-4
+                            h2 Where To Go Next
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorum ducimus enim! Voluptatum consequuntur soluta excepturi natus. Sunt repellat aliquam earum voluptates asperiores, doloremque, alias beatae aut quis consectetur obcaecati.
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus ut voluptatibus soluta, quos fuga?
+
+            //- ===== FAQ =====
+            section#faq.py-5
+                .container
+                    h2.text-center.mb-3 Asked Questions
+                    .accordion.accordion-flush#bt-faq 
+                        .accordion-item
+                            h4.accordion-header#faq_header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#answer_1") Question 1
+                            .accordion-collapse.collapse.py-4.px-3#answer_1(data-bs-parent="#bt-faq") Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam qui officiis, veritatis quos dicta! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repudiandae quo dolorum debitis, maxime ducimus quasi necessitatibus accusamus nisi nesciunt ea illum dicta impedit facere quos praesentium aliquid blanditiis assumenda. 
+                        .accordion-item
+                            h4.accordion-header#faq_header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#answer_2") Question 2
+                            .accordion-collapse.collapse.py-4.px-3#answer_2(data-bs-parent="#bt-faq") Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam qui officiis, veritatis quos dicta! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repudiandae quo dolorum debitis, maxime ducimus quasi necessitatibus accusamus nisi nesciunt ea illum dicta impedit facere quos praesentium aliquid blanditiis assumenda. 
+                        .accordion-item
+                            h4.accordion-header#faq_header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#answer_3") Question 3
+                            .accordion-collapse.collapse.py-4.px-3#answer_3(data-bs-parent="#bt-faq") Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam qui officiis, veritatis quos dicta! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis repudiandae quo dolorum debitis, maxime ducimus quasi necessitatibus accusamus nisi nesciunt ea illum dicta impedit facere quos praesentium aliquid blanditiis assumenda. 
+                            
+        //- =========== footeer ============
+        footer.bg-dark.text-light.text-center.py-4.position-relative 
+            .container
+                p.lead Copyright &copy; 2021 ALLOUI Abdelraouf
+                a(href="#").position-absolute.bottom-0.end-0.p-5
+                    i.bi.bi-arrow-up-circle.h2
         script(src="assets/js/bootstrap.min.js")
         script(src="assets/js/index.js") 
